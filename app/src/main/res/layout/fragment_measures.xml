@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.MeasuresFragment">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/currentDateandTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Check Apr 04,12:38"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:text="Daily View"
+            app:layout_constraintEnd_toStartOf="@id/dropDown"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/dropDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:src="@drawable/arrow_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="@dimen/_16sdp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_20sdp"
+                android:background="@drawable/rounded_drawable_more_pink">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center|start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="pH Level"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginBottom="@dimen/_10sdp"/>
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/pHseekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_22sdp"
+                        android:progress="0"
+                        android:max="20"
+                        android:clickable="false"
+                        android:paddingEnd="@dimen/_30sdp"
+                        android:progressBackgroundTint="@color/white"
+                        android:progressTint="@color/white"
+                        android:thumbTint="@color/appColor"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:id="@+id/textpHLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text=""/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/fixpH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/textfixpH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/nextimage"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_20sdp"
+                android:background="@drawable/rounded_drawable_more_pink">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center|start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Water Clearity"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginBottom="@dimen/_10sdp"/>
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/waterClearitySeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_22sdp"
+                        android:progress="0"
+                        android:clickable="false"
+                        android:max="10"
+                        android:paddingEnd="@dimen/_30sdp"
+                        android:progressBackgroundTint="@color/white"
+                        android:progressTint="@color/white"
+
+                        android:thumbTint="@color/appColor"
+                        android:background="@android:color/transparent" />
+                    <TextView
+                        android:id="@+id/textWaterClarity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text=""/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/fixwaterClarity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                            android:id="@+id/textfixwaterClarity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fix Now"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/nextimage"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_20sdp"
+                android:background="@drawable/rounded_drawable_more_pink">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center|start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Water Level"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginBottom="@dimen/_10sdp"/>
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/waterLevelSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_22sdp"
+                        android:progress="0"
+                        android:paddingEnd="@dimen/_30sdp"
+                        android:progressBackgroundTint="@color/white"
+                        android:progressTint="@color/white"
+                        android:clickable="false"
+                        android:thumbTint="@color/appColor"
+                        android:background="@android:color/transparent" />
+                    <TextView
+                        android:id="@+id/textWaterLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text=""/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/fixwaterlevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/textfixwaterlevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/nextimage"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_20sdp"
+                android:background="@drawable/rounded_drawable_more_pink">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center|start">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Water Temperature"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginBottom="@dimen/_10sdp"/>
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/waterTempSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_22sdp"
+                        android:progress="0"
+                        android:paddingEnd="@dimen/_30sdp"
+                        android:progressBackgroundTint="@color/white"
+                        android:progressTint="@color/white"
+                        android:max="100"
+                        android:clickable="false"
+                        android:thumbTint="@color/appColor"
+                        android:background="@android:color/transparent" />
+                    <TextView
+                        android:id="@+id/textWaterTemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text=""/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/fixtemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/textfixtemperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/nextimage"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

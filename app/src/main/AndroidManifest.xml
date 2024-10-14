@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name="myandroid.app.hhobzic.a360pool.service.MyApplication"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Pool360"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:targetApi="31">
+
+        <activity
+            android:name="myandroid.app.hhobzic.a360pool.ChangePassActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="myandroid.app.hhobzic.a360pool.HomeActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="myandroid.app.hhobzic.a360pool.RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name="myandroid.app.hhobzic.a360pool.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="myandroid.app.hhobzic.a360pool.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="face" />
+        <service
+            android:name="myandroid.app.hhobzic.a360pool.service.FrequentTaskService"
+            android:foregroundServiceType="location|camera|microphone"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>
